@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ColorWidget</class>
+ <widget class="QWidget" name="ColorWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>141</width>
+    <height>340</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ColorWidget</string>
+  </property>
+  <widget class="QGroupBox" name="RGB">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>140</y>
+     <width>141</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>RGB</string>
+   </property>
+   <widget class="QSpinBox" name="RGB_B">
+    <property name="geometry">
+     <rect>
+      <x>93</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="RGB_R">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="RGB_G">
+    <property name="geometry">
+     <rect>
+      <x>48</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="HEX">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>290</y>
+     <width>141</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>HEX</string>
+   </property>
+   <widget class="QLineEdit" name="HEX_value">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>25</y>
+      <width>135</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="LCh">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>240</y>
+     <width>141</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>LCh</string>
+   </property>
+   <widget class="QDoubleSpinBox" name="LCh_h">
+    <property name="geometry">
+     <rect>
+      <x>93</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="specialValueText">
+     <string/>
+    </property>
+    <property name="prefix">
+     <string/>
+    </property>
+    <property name="suffix">
+     <string>°</string>
+    </property>
+    <property name="decimals">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <double>360.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="LCh_L">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="suffix">
+     <string notr="true">%</string>
+    </property>
+    <property name="maximum">
+     <double>100.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="LCh_C">
+    <property name="geometry">
+     <rect>
+      <x>48</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="suffix">
+     <string/>
+    </property>
+    <property name="maximum">
+     <double>200.000000000000000</double>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="ColorFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>140</width>
+     <height>140</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="Lab">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>190</y>
+     <width>141</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Lab</string>
+   </property>
+   <widget class="QDoubleSpinBox" name="Lab_b">
+    <property name="geometry">
+     <rect>
+      <x>93</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="minimum">
+     <double>-127.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>127.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="Lab_L">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="maximum">
+     <double>100.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="Lab_a">
+    <property name="geometry">
+     <rect>
+      <x>48</x>
+      <y>25</y>
+      <width>45</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
+    </property>
+    <property name="minimum">
+     <double>-127.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>127.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>RGB_R</tabstop>
+  <tabstop>RGB_G</tabstop>
+  <tabstop>RGB_B</tabstop>
+  <tabstop>Lab_L</tabstop>
+  <tabstop>Lab_a</tabstop>
+  <tabstop>Lab_b</tabstop>
+  <tabstop>LCh_L</tabstop>
+  <tabstop>LCh_C</tabstop>
+  <tabstop>LCh_h</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

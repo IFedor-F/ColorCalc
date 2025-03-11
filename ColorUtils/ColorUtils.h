@@ -1,0 +1,9 @@
+#ifndef COLORUTILS_LIBRARY_H
+#define COLORUTILS_LIBRARY_H
+#include "Types/Lab.h"
+#include "Types/LCh.h"
+#include "Types/RGB.h"
+#include "Types/XYZ.h"
+#include "Types/HEX.h"
+#include "color_difference.h"
+#endif //COLORUTILS_LIBRARY_H

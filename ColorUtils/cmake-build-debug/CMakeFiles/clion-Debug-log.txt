@@ -1,0 +1,4 @@
+C:\Users\_Fedor_F\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/_Fedor_F/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Users\_Fedor_F\CLionProjects\ColorCalc\ColorUtils -B C:\Users\_Fedor_F\CLionProjects\ColorCalc\ColorUtils\cmake-build-debug
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/_Fedor_F/CLionProjects/ColorCalc/ColorUtils/cmake-build-debug
