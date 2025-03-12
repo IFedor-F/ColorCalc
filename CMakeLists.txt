@@ -17,9 +17,14 @@ find_package(Qt6 COMPONENTS
 
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+# Sets Resources files (for icon)
+set(RESOURCE_FILE resources/resources.qrc)
+qt_add_resources(RESOURCE_SRCS ${RESOURCE_FILE})
+
+
 # ColorUtils
 add_subdirectory(ColorUtils)
-
 add_executable(ColorCalc main.cpp
         ${RESOURCE_SRCS}
         ColorWidget/ColorWidget.cpp
@@ -29,6 +34,9 @@ add_executable(ColorCalc main.cpp
         mainwindow/MainWindow.h
         mainwindow/MainWindow.ui
 )
+# To include without MainWindow/MainWindow and same with ColorWidget and ColorUtils
+target_include_directories(ColorCalc PRIVATE MainWindow PRIVATE ColorWidget PRIVATE ColorUtils)
+
 
 target_link_libraries(ColorCalc
         Qt::Core
@@ -36,13 +44,6 @@ target_link_libraries(ColorCalc
         Qt::Widgets
         ColorUtils
 )
-
-# To include without MainWindow/MainWindow and same with ColorWidget and ColorUtils
-target_include_directories(ColorCalc PRIVATE MainWindow PRIVATE ColorWidget PRIVATE ColorUtils)
-
-# Sets Resources files (for icon)
-set(RESOURCE_FILE resources/resources.qrc)
-qt_add_resources(RESOURCE_SRCS ${RESOURCE_FILE})
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)
