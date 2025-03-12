@@ -5,7 +5,7 @@
 #include "RGB.h"
 using namespace ColorUtils;
 
-RGB::RGB(): R(), G(), B(){
+RGB::RGB(): R(), G(), B() {
 }
 
 RGB::RGB(const int R, const int G, const int B): R(R), G(G), B(B) {

@@ -21,6 +21,7 @@ namespace ColorUtils {
 
             double components[3]{};
         };
+
         LCh();
 
         LCh(double L, double C, double h);

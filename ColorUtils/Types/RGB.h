@@ -22,6 +22,7 @@ namespace ColorUtils {
 
             uint8_t components[3]{};
         };
+
         RGB();
 
         RGB(int R, int G, int B);

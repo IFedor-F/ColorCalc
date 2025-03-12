@@ -22,6 +22,7 @@ namespace ColorUtils {
 
             double components[3]{};
         };
+
         Lab();
 
         Lab(double L, double a, double b);
