@@ -37,6 +37,8 @@ namespace ColorUtils {
 
         explicit XYZ(const HEX &hex);
 
+        bool operator==(const XYZ &xyz) const;
+
         double &operator[](const std::size_t index) {
             return components[index];
         }

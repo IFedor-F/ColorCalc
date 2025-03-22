@@ -35,6 +35,8 @@ namespace ColorUtils {
 
         explicit RGB(const HEX &hex);
 
+        bool operator==(const RGB &rgb) const;
+
         uint8_t &operator[](const std::size_t index) {
             return components[index];
         }

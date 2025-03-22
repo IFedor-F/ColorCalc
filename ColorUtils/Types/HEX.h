@@ -32,6 +32,8 @@ namespace ColorUtils {
 
         explicit HEX(const std::string &str);
 
+        bool operator==(const HEX &hex) const;
+
         [[nodiscard]] uint32_t toInt() const;
 
         [[nodiscard]] std::string toHex() const;

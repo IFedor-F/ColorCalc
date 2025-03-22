@@ -35,6 +35,8 @@ namespace ColorUtils {
 
         explicit Lab(const HEX &hex);
 
+        bool operator==(const Lab &lab) const;
+
         double &operator[](const std::size_t index) {
             return components[index];
         }

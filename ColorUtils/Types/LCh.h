@@ -34,6 +34,8 @@ namespace ColorUtils {
 
         explicit LCh(const HEX &hex);
 
+        bool operator==(const LCh &lch) const;
+
         double &operator[](const std::size_t index) {
             return components[index];
         }
