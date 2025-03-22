@@ -32,11 +32,11 @@ namespace ColorUtils {
 
         explicit HEX(const std::string &str);
 
-        uint32_t toInt() const;
+        [[nodiscard]] uint32_t toInt() const;
 
-        std::string toHex() const;
+        [[nodiscard]] std::string toHex() const;
 
-        std::string toString() const;
+        [[nodiscard]] std::string toString() const;
     };
 } // ColorUtils
 
