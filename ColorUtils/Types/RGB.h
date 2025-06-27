@@ -6,6 +6,7 @@
 #define RGB_H
 #include <cstddef>
 #include <cstdint>
+#include <functional>
 
 namespace ColorUtils {
     class HEX;
@@ -42,4 +43,11 @@ namespace ColorUtils {
         }
     };
 } // ColorUtils
+template<>
+struct std::hash<ColorUtils::RGB> {
+    std::size_t operator()(const ColorUtils::RGB &rgb) const noexcept {
+        return std::hash<int>()(rgb.R << 16 | rgb.G << 8 | rgb.B);
+    }
+};
+
 #endif //RGB_H

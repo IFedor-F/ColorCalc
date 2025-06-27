@@ -5,6 +5,7 @@
 #ifndef HSV_H
 #define HSV_H
 #include <cstddef>
+#include <functional>
 
 namespace ColorUtils {
     class HEX;
@@ -42,4 +43,10 @@ namespace ColorUtils {
     };
 } // ColorUtils
 
+template<>
+struct std::hash<ColorUtils::LCh> {
+    std::size_t operator()(const ColorUtils::LCh &lch) const noexcept {
+        return hash<double>()(lch.L) ^ (hash<double>()(lch.C) << 1) ^ (hash<double>()(lch.h) << 2);
+    }
+};
 #endif //HSV_H

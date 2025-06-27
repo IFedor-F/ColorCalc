@@ -5,7 +5,7 @@
 #ifndef LAB_H
 #define LAB_H
 #include <cstddef>
-
+#include "functional"
 
 namespace ColorUtils {
     class HEX;
@@ -42,4 +42,12 @@ namespace ColorUtils {
         }
     };
 } // ColorUtils
+
+template<>
+struct std::hash<ColorUtils::Lab> {
+    std::size_t operator()(const ColorUtils::Lab &lab) const noexcept {
+        return hash<double>()(lab.L) ^ (hash<double>()(lab.a) << 1) ^ (hash<double>()(lab.b) << 2);
+    }
+};
+
 #endif //LAB_H

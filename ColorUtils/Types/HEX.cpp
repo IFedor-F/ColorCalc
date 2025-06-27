@@ -6,7 +6,6 @@
 
 #include <algorithm>
 #include <iomanip>
-#include "functional"
 using namespace ColorUtils;
 
 HEX::HEX(const uint32_t value): value(value) {
@@ -45,10 +44,3 @@ std::string HEX::toString() const {
 bool HEX::operator==(const HEX &hex) const {
     return value == hex.value;
 }
-
-template<>
-struct std::hash<HEX> {
-    std::size_t operator()(const HEX &hex) const noexcept {
-        return hash<uint32_t>()(hex.toInt());
-    }
-};

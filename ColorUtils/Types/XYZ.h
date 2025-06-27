@@ -5,6 +5,7 @@
 #ifndef XYZ_H
 #define XYZ_H
 #include <cstddef>
+#include "functional"
 
 namespace ColorUtils {
     class HEX;
@@ -44,4 +45,12 @@ namespace ColorUtils {
         }
     };
 } // ColorUtils
+
+template<>
+struct std::hash<ColorUtils::XYZ> {
+    std::size_t operator()(const ColorUtils::XYZ &xyz) const noexcept {
+        return hash<double>()(xyz.X) ^ (hash<double>()(xyz.Y) << 1) ^ (hash<double>()(xyz.Z) << 2);
+    }
+};
+
 #endif //XYZ_H

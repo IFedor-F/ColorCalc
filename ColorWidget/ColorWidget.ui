@@ -238,6 +238,9 @@
     <property name="buttonSymbols">
      <enum>QAbstractSpinBox::ButtonSymbols::NoButtons</enum>
     </property>
+    <property name="suffix">
+     <string>%</string>
+    </property>
     <property name="maximum">
      <double>100.000000000000000</double>
     </property>

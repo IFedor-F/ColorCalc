@@ -6,7 +6,7 @@
 #define HEX_H
 #include <cstdint>
 #include <string>
-
+#include "functional"
 
 namespace ColorUtils {
     class XYZ;
@@ -42,4 +42,10 @@ namespace ColorUtils {
     };
 } // ColorUtils
 
+template<>
+struct std::hash<ColorUtils::HEX> {
+    std::size_t operator()(const ColorUtils::HEX &hex) const noexcept {
+        return hash<uint32_t>()(hex.toInt());
+    }
+};
 #endif //HEX_H

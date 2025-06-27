@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.30)
 project(ColorCalc)
 
+set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
 
 set(CMAKE_PREFIX_PATH "C:\\Qt\\6.8.2\\mingw_64\\")
 set(CMAKE_CXX_STANDARD 20)
@@ -25,7 +26,7 @@ qt_add_resources(RESOURCE_SRCS ${RESOURCE_FILE})
 
 # ColorUtils
 add_subdirectory(ColorUtils)
-add_executable(ColorCalc main.cpp
+add_executable(ColorCalc WIN32 main.cpp
         ${RESOURCE_SRCS}
         ColorWidget/ColorWidget.cpp
         ColorWidget/ColorWidget.h
